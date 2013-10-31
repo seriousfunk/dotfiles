@@ -21,6 +21,7 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
 
 alias h='history'
+shopt -s histverify   # Verify history search completion before execution
 alias j='jobs -l'
 alias which='type -a'
 alias ..='cd ..'
