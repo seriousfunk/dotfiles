@@ -1,4 +1,7 @@
-linux
+dotfiles
 =====
 
-Linux snippets: scripts, .bashrc file
+dotfiles and templates for:
+
+  - .bashrc
+  - .htaccss
