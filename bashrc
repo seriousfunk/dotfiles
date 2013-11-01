@@ -2,7 +2,6 @@
 #   Filename: .bashrc                                                        #
 # Maintainer: Matt Muro <git@watchcity.com>                                  #
 #        URL: http://github.com/seriousfunk/dotfiles                         #
-#                                                                            #
 ##############################################################################
 
 # If not running interactively, don't do anything
