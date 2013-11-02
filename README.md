@@ -1,7 +1,7 @@
 dotfiles
 =====
 
-dotfiles and templates for:
+Linux dotfiles: 
 
   - .bashrc
-  - .htaccss
+  - .vimrc
