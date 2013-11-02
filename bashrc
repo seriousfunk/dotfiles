@@ -79,3 +79,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 export EDITOR="vim"
 export VISUAL="vim"
+
+set -o vi
+
