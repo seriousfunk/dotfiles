@@ -19,7 +19,7 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 " Map <C-L> (Ctrl-C-L,redraw screen) to also turn off search highlighting until the next search
 nnoremap <C-L> :nohl<CR><C-L>
-set background=dark
+set background=light
 " solarized options 
 let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
