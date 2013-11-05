@@ -25,7 +25,6 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
 
 alias h='history'
-shopt -s histverify   # Verify history search completion before execution
 alias j='jobs -l'
 alias which='type -a'
 alias ..='cd ..'
@@ -85,4 +84,104 @@ export EDITOR="vim"
 export VISUAL="vim"
 
 set -o vi
+
+#-------------------------------------------------------------
+# Set Options
+#-------------------------------------------------------------
+
+shopt -s histappend histreedit histverify
+set -o ignoreeof    # prevent exiting of shell with Ctrl-d
+
+#-------------------------------------------------------------
+# Set Prompt, Greeting, Exit messaging
+#-------------------------------------------------------------
+
+# Normal Colors
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+# Bold
+Bold='\[\033[1m\]'      # Bold
+BBlack='\e[1;30m'       # Black
+BRed='\e[1;31m'         # Red
+BGreen='\e[1;32m'       # Green
+BYellow='\e[1;33m'      # Yellow
+BBlue='\e[1;34m'        # Blue
+BPurple='\e[1;35m'      # Purple
+BCyan='\e[1;36m'        # Cyan
+BWhite='\e[1;37m'       # White
+
+# Background
+On_Black='\e[40m'       # Black
+On_Red='\e[41m'         # Red
+On_Green='\e[42m'       # Green
+On_Yellow='\e[43m'      # Yellow
+On_Blue='\e[44m'        # Blue
+On_Purple='\e[45m'      # Purple
+On_Cyan='\e[46m'        # Cyan
+On_White='\e[47m'       # White
+
+NC="\e[m"               # Color Reset
+
+ALERT=${BWhite}${On_Red} # Bold White on red background
+
+function _exit()        # Function to run upon exit of shell.
+{
+    echo -e "${BRed}Hasta la vista, baby${NC}"
+}
+trap _exit EXIT
+
+# Test connection type:
+if [ -n "${SSH_CONNECTION}" ]; then
+    CNX=${Green}        # Connected on remote machine, via ssh (good).
+elif [[ "${DISPLAY%%:0*}" != "" ]]; then
+    CNX=${ALERT}        # Connected on remote machine, not via ssh (bad).
+else
+    CNX=${BCyan}        # Connected on local machine.
+fi
+
+# Test user type:
+if [[ ${USER} == "root" ]]; then
+    SU=${Red}           # User is root.
+elif [[ ${USER} != $(logname) ]]; then
+    SU=${BRed}          # User is not login user.
+else
+    SU=${BGreen}         # User is normal (well ... most of us are).
+fi
+
+# Now we construct the prompt.
+# PROMPT_COMMAND="history -a"
+
+function exitstatus {
+
+    EXITSTATUS="$?"
+
+    HOST="\h"
+    USERNAME="\u"
+    DIR="\w"
+    NEWLINE="\n"
+    DATE="\d"
+    TIME="\t"
+
+    # First USER:HOST sets the terminal window title
+    PROMPT="\[\033]0;${USERNAME}@${HOST}: \w\007\n\[$BBlue\][\[${SU}\]${USERNAME}\[$BBlue\]:\[$BGreen\]${HOST}\[$BBlue\]][\[$BGreen\]${DIR}\[$BBlue\]]\[$NC\]" 
+    if [ "${EXITSTATUS}" -eq 0 ]
+    then
+       # PS1="${PROMPT} ${BGreen}:)${NC}${NEWLINE}\$ "
+       PS1="${PROMPT} ${BGreen}:)${NC} \$ "
+    else
+       # PS1="${PROMPT} ${BRed}:(${NC}${NEWLINE}\$ "
+       PS1="${PROMPT} ${BRed}:(${NC} \$ "
+    fi
+
+    PS2="${Bold}>${NC} "
+}
+
+PROMPT_COMMAND=exitstatus
 
