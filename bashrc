@@ -90,6 +90,9 @@ set -o vi
 #-------------------------------------------------------------
 
 shopt -s histappend histreedit histverify
+HISTCONTROL=ignoreboth:ignoredups:erasedups
+shopt -s cmdhist
+shopt -s cdspell
 set -o ignoreeof    # prevent exiting of shell with Ctrl-d
 
 #-------------------------------------------------------------
@@ -183,5 +186,5 @@ function exitstatus {
     PS2="${Bold}>${NC} "
 }
 
-PROMPT_COMMAND=exitstatus
+PROMPT_COMMAND=exitstatus;history -a;
 
