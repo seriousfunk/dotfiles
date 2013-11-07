@@ -53,6 +53,7 @@ alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files as well as other files.
 alias l.='ls -ld .*'       #  Show hidden files only.
+alias cl='clear;ll'        #  Clear the screen and then ll
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
 #-------------------------------------------------------------
@@ -62,6 +63,11 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 if [ -f "/usr/local/cpanel/3rdparty/bin/git" ]; then
     alias git='/usr/local/cpanel/3rdparty/bin/git'
 fi
+
+alias gs='git status'
+alias gl='git log'
+alias gpl='git pull origin master'
+alias gp='git push'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
