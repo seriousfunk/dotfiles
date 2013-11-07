@@ -35,4 +35,23 @@ chmod u+x ./makesymlinks.sh
 ./makesymlinks.sh
 ```
 
+Configuration
+------------
+You can skip some of these steps (i.e. global config settings) if you have already have a .gitconfig with your settings in it.
+
+``` bash
+git config --global user.name "Your Name"
+git config --global user.email "you@email.com"
+git config --global color.ui true
+git config --global push.default simple
+# remember your password for 5 mins
+git config credential.helper 'cache --timeout=300'
+cd ~/dotfiles/.git
+vi config
+# if your [remote "origin"] url is not you@github, fix it.
+# it may be incorrect if your server has an older version of git on it and you've cloned https
+change:  url = https://github.com/seriousfunk/dotfiles
+to this: url = https://seriousfunk@github.com/seriousfunk/dotfiles.git
+```
+
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
