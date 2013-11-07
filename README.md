@@ -31,5 +31,8 @@ Installation
 ``` bash
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles
 cd ~/dotfiles
+chmod u+x ./makesymlinks.sh
 ./makesymlinks.sh
 ```
+
+You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
