@@ -56,6 +56,14 @@ alias l.='ls -ld .*'       #  Show hidden files only.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
 #-------------------------------------------------------------
+# Git shortcuts
+#-------------------------------------------------------------
+# Alias to the most recent Git on my systems (shared hosting)
+if [ -f "/usr/local/cpanel/3rdparty/bin/git" ]; then
+    alias git='/usr/local/cpanel/3rdparty/bin/git'
+fi
+
+#-------------------------------------------------------------
 # Tailoring 'less'
 #-------------------------------------------------------------
 
