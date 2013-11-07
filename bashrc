@@ -67,7 +67,7 @@ fi
 alias gs='git status'
 alias gl='git log'
 alias gpl='git pull origin master'
-alias gp='git push'
+alias gpu='git push'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
