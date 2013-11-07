@@ -29,4 +29,6 @@ let g:solarized_termcolors = 256
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
+" Call vim/autoload/togglebg for one-click switching of background to light/dark
+call togglebg#map("<F5>")
 
