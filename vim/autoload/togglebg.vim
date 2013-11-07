@@ -2,6 +2,7 @@
 " Modified:     2011 Apr 29
 " Maintainer:   Ethan Schoonover
 " License:      OSI approved MIT license
+" From:         https://github.com/altercation/vim-colors-solarized 
 
 if exists("g:loaded_togglebg")
     finish
