@@ -46,6 +46,12 @@ git config --global color.ui true
 git config --global push.default simple
 # remember your password for 5 mins
 git config credential.helper 'cache --timeout=300'
+```
+
+You May Need to
+------------
+
+``` bash
 cd ~/dotfiles/.git
 vi config
 # if your [remote "origin"] url is not you@github, fix it.
