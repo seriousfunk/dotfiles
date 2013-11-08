@@ -3,10 +3,10 @@ Dotfiles
 
 Cloud storage for my Linux dotfiles so I can sync my bash, vim and other settings across servers.
 
-This script and even the abridged markdown below was taken from:
-https://github.com/michaeljsmalley/dotfiles
-http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
-Thank you.
+This script and much of the abridged markdown below was taken from:
++ https://github.com/michaeljsmalley/dotfiles
++ http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
+
 
 Overview
 ------------
@@ -37,7 +37,7 @@ chmod u+x ./makesymlinks.sh
 
 Configuration
 ------------
-You can skip some of these steps (i.e. global config settings) if you have already have a .gitconfig with your settings in it.
+You can skip some of these steps (i.e. global config settings) if you have already have a .gitconfig with your settings.
 
 ``` bash
 git config --global user.name "Your Name"
