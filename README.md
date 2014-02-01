@@ -37,7 +37,7 @@ chmod u+x ./makesymlinks.sh
 
 Configuration
 ------------
-You can skip some of these steps (i.e. global config settings) if you have already have a .gitconfig with your settings.
+You can skip some of these steps (i.e. global config settings) if you already have a .gitconfig with your settings.
 
 ``` bash
 git config --global user.name "Your Name"
