@@ -191,11 +191,11 @@ function exitstatus {
     PROMPT="\[\033]0;${USERNAME}@${HOST}: \w\007\n\[$BBlue\][\[${SU}\]${USERNAME}\[$BBlue\]:\[$BGreen\]${HOST}\[$BBlue\]][\[$BGreen\]${DIR}\[$BBlue\]]\[$NC\]" 
     if [ "${EXITSTATUS}" -eq 0 ]
     then
-       # PS1="${PROMPT} ${BGreen}:)${NC}${NEWLINE}\$ "
-       PS1="${PROMPT} ${BGreen}:)${NC} \$ "
+       PS1="${PROMPT} ${BGreen}:)${NC}${NEWLINE}\$ "
+       # PS1="${PROMPT} ${BGreen}:)${NC} \$ "
     else
-       # PS1="${PROMPT} ${BRed}:(${NC}${NEWLINE}\$ "
-       PS1="${PROMPT} ${BRed}:(${NC} \$ "
+       PS1="${PROMPT} ${BRed}:(${NC}${NEWLINE}\$ "
+       # PS1="${PROMPT} ${BRed}:(${NC} \$ "
     fi
 
     PS2="${Bold}>${NC} "
