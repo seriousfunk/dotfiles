@@ -189,8 +189,10 @@ function exitstatus {
     TIME="\t"
 
     # First USER:HOST sets the terminal window title
-    PROMPT="\[\033]0;${USERNAME}@${HOST}: \w\007\n\[$BBlue\][\[${SU}\]${USERNAME}\[$BBlue\]:\[$BGreen\]${HOST}\[$BBlue\]][\[$BGreen\]${DIR}\[$BBlue\]]\[$NC\]" 
-    if [ "${EXITSTATUS}" -eq 0 ]
+    # PROMPT="${USERNAME}@${HOST}: \w\007\n\[$BBlue\][\[${SU}\]${USERNAME}\[$BBlue\]:\[$BGreen\]${HOST}\[$BBlue\]][\[$BGreen\]${DIR}\[$BBlue\]]\[$NC\]" 
+    # PROMPT="$BBlue${SU}${USERNAME}$BBlue@$BGreen${HOST}: ${DIR}$BBlue\[$NC\]" 
+    PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
+    if [ "${EXITSTATUS}" -eq 0 ] 
     then
        PS1="${PROMPT} ${BGreen}:)${NC}${NEWLINE}\$ "
        # PS1="${PROMPT} ${BGreen}:)${NC} \$ "
