@@ -75,7 +75,9 @@ alias gpl='git pull origin master'
 # Docker shortcuts
 #-------------------------------------------------------------
 alias di='docker images'
+alias cdi='clear; docker images'
 alias dp='docker ps -a'
+alias cdp='clear; docker ps -a'
 alias drmaq='docker rm -f $(docker ps -a -q)'
 
 #-------------------------------------------------------------
