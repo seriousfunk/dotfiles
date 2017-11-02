@@ -74,15 +74,9 @@ alias gpl='git pull origin master'
 #-------------------------------------------------------------
 # Docker shortcuts
 #-------------------------------------------------------------
-if [[ ${USER} == "root" ]]; then
-    alias di='docker images'
-    alias dp='docker ps -a'
-    alias drmaq='docker rm -f $(docker ps -a -q)'
-else
-    alias di='sudo docker images'
-    alias dp='sudo docker ps -a'
-    alias drmaq='sudo docker rm -f $(docker ps -a -q)'
-fi
+alias di='docker images'
+alias dp='docker ps -a'
+alias drmaq='docker rm -f $(docker ps -a -q)'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
