@@ -72,6 +72,14 @@ alias gp='git push'
 alias gpl='git pull origin master'
 
 #-------------------------------------------------------------
+# Docker shortcuts
+#-------------------------------------------------------------
+
+alias di='sudo docker images'
+alias dp='sudo docker ps -a'
+alias drmaq='docker rm -f $(docker ps -a -q)'
+
+#-------------------------------------------------------------
 # Tailoring 'less'
 #-------------------------------------------------------------
 
