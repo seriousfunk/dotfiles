@@ -33,7 +33,8 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && cd ~/dotfiles \
 && chmod u+x ./makesymlinks.sh \
 && ./makesymlinks.sh \
-. ~/.bashrc ```
+. ~/.bashrc 
+```
 
 Configuration
 ------------
