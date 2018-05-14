@@ -36,6 +36,8 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
 
+alias gdn='cd /mnt/c/Users/muro/Documents/bitbucket-repos/dce-nodejs'
+
 #-------------------------------------------------------------
 # The 'ls' family (this assumes you use a recent GNU ls).
 #-------------------------------------------------------------
@@ -58,6 +60,7 @@ alias l.='ls -ld .*'       #  Show hidden files only.
 alias cl='clear;ll'        #  Clear the screen and then ll
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 
+
 #-------------------------------------------------------------
 # Git shortcuts
 #-------------------------------------------------------------
@@ -74,11 +77,13 @@ alias gpl='git pull origin master'
 #-------------------------------------------------------------
 # Docker shortcuts
 #-------------------------------------------------------------
-alias di='docker images'
-alias cdi='clear; docker images'
-alias dp='docker ps -a'
-alias cdp='clear; docker ps -a'
-alias drmaq='docker rm -f $(docker ps -a -q)'
+alias docker='docker.exe'
+alias docker-compose='docker-compose.exe'
+alias di='docker.exe images'
+alias cdi='clear; docker.exe images'
+alias dp='docker.exe ps -a'
+alias cdp='clear; docker.exe ps -a'
+alias drmaq='docker rm -f $(docker.exe ps -a -q)'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
@@ -177,7 +182,7 @@ fi
 # Test user type:
 if [[ ${USER} == "root" ]]; then
     SU=${Red}           # User is root.
-elif [[ ${USER} != $(logname) ]]; then
+elif [[ ${USER} != "muro" ]]; then
     SU=${BRed}          # User is not login user.
 else
     SU=${BGreen}         # User is normal (well ... most of us are).
@@ -215,3 +220,4 @@ function exitstatus {
 
 PROMPT_COMMAND=exitstatus;history -a;
 
+export TERM=screen-256color
