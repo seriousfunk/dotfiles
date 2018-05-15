@@ -85,7 +85,8 @@ alias di='docker images'
 alias cdi='clear; docker images'
 alias dp='docker ps -a'
 alias cdp='clear; docker ps -a'
-alias drmaq='docker rm -f $(docker ps -a -q)'
+alias drmc='docker rm -f $(docker ps -a -q)' # Remove stopped containers
+alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <none> containers
 
 #-------------------------------------------------------------
 # Tailoring 'less'
