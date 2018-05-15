@@ -26,6 +26,4 @@ set showmode
 nnoremap <C-L> :nohl<CR><C-L>
 set background=light
 colorscheme solarized8
-" Call vim/autoload/togglebg for one-click switching of background to light/dark
-call togglebg#map("<F5>")
 
