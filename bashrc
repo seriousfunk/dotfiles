@@ -1,5 +1,4 @@
 ##############################################################################
-#   Filename: .bashrc                                                        #
 # Maintainer: Matt Muro <git@watchcity.com>                                  #
 #        URL: http://github.com/seriousfunk/dotfiles                         #
 ##############################################################################
@@ -77,13 +76,16 @@ alias gpl='git pull origin master'
 #-------------------------------------------------------------
 # Docker shortcuts
 #-------------------------------------------------------------
-alias docker='docker.exe'
-alias docker-compose='docker-compose.exe'
-alias di='docker.exe images'
-alias cdi='clear; docker.exe images'
-alias dp='docker.exe ps -a'
-alias cdp='clear; docker.exe ps -a'
-alias drmaq='docker rm -f $(docker.exe ps -a -q)'
+if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  alias docker='docker.exe'
+  alias docker-compose='docker-compose.exe'
+fi
+
+alias di='docker images'
+alias cdi='clear; docker images'
+alias dp='docker ps -a'
+alias cdp='clear; docker ps -a'
+alias drmaq='docker rm -f $(docker ps -a -q)'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
@@ -220,4 +222,5 @@ function exitstatus {
 
 PROMPT_COMMAND=exitstatus;history -a;
 
+#make sure terminal window and vi fill screen with color and not just behind text
 export TERM=screen-256color
