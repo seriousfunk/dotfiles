@@ -32,4 +32,11 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+# add vim-pathogen package manager
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# add vim colorschemes 
+cd ~/.vim/bundle && \
+git submodule add https://github.com/rafi/awesome-vim-colorschemes
 
