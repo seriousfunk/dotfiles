@@ -31,12 +31,3 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-# add vim-pathogen package manager
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-# add vim colorschemes 
-cd ~/.vim/bundle && \
-git submodule add https://github.com/rafi/awesome-vim-colorschemes
-
