@@ -147,7 +147,8 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 
 function _exit()        # Function to run upon exit of shell.
 {
-    echo -e "${BRed}Hasta la vista, baby${NC}"
+    echo -e "${BRed}Dave, this conversation can serve no purpose anymore. Goodbye.${NC}"
+    sleep 3
 }
 trap _exit EXIT
 
@@ -191,8 +192,10 @@ function exitstatus {
 
 PROMPT_COMMAND=exitstatus;history -a;
 
-#make sure terminal window and vi fill screen with color and not just behind text
+# make sure terminal window and vi fill screen with color and not just behind text
 export TERM=screen-256color
 
-if [ -f figlet ] then figlet "HAL 9000"; fi
-if [ -f fortune ] then fortune; fi
+# print banner and fortune if installed on system
+if hash figlet 2>/dev/null; then echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; fi
+if hash fortune 2>/dev/null; then echo -e "${Yellow}"; fortune; echo -e "${NC}; fi
+echo ${NEWLINE}
