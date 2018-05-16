@@ -185,7 +185,7 @@ function exitstatus {
        PROMPT="${BRed}:(${NC} "
     fi
 
-    PS1="${PROMT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC} ${DIR} \$"
+    PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC} ${DIR} \$"
     PS2="${Bold}>${NC} "
 }
 
