@@ -192,10 +192,14 @@ function exitstatus {
 
 PROMPT_COMMAND=exitstatus;history -a;
 
+#-------------------------------------------------------------
 # make sure terminal window and vi fill screen with color and not just behind text
 export TERM=screen-256color
+#-------------------------------------------------------------
 
+#-------------------------------------------------------------
 # print banner and fortune if installed on system
+#-------------------------------------------------------------
 if hash figlet 2>/dev/null; 
 then 
   echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; 
