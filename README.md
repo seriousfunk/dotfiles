@@ -31,8 +31,9 @@ Cut and paste into your linux terminal the 5 lines below to install and link the
 ``` bash
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && cd ~/dotfiles \
-&& chmod u+x ./makesymlinks.sh \
+&& chmod u+x ./makesymlinks.sh ./makevimfancy.sh \
 && ./makesymlinks.sh \
+&& ./makevimfancy.sh \
 && . ~/.bashrc 
 ```
 
