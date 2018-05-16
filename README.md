@@ -27,7 +27,7 @@ So, to recap, the install script will:
 
 Installation
 ------------
-Cut and paste into your linux terminal the 5 lines below to install and link these dotfiles :)
+Cut and paste into your linux terminal the 6 lines below to install and link these dotfiles :)
 ``` bash
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && cd ~/dotfiles \
