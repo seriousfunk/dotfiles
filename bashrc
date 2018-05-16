@@ -196,6 +196,19 @@ PROMPT_COMMAND=exitstatus;history -a;
 export TERM=screen-256color
 
 # print banner and fortune if installed on system
-if hash figlet 2>/dev/null; then echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; fi
-if hash fortune 2>/dev/null; then echo -e "${Yellow}"; fortune; echo -e "${NC}; fi
+if hash figlet 2>/dev/null; 
+then 
+  echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; 
+else 
+  echo -e "${NC}Install figlet to print a custom header from ~/.bashrc"; 
+fi
+
+if hash figlet 2>/dev/null; 
+then 
+  echo -e "${Yellow}"; fortune; echo -e "${NC}"; 
+else 
+  echo -e "${NC}Install fortune a random fortune when you login."; 
+fi
+
+if hash fortune 2>/dev/null; then echo -e "${Yellow}"; fortune; echo -e "${NC}"; fi
 echo ${NEWLINE}
