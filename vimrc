@@ -22,6 +22,3 @@ set pastetoggle=<F2>
 set showmode
 " Map <C-L> (Ctrl-C-L,redraw screen) to also turn off search highlighting until the next search
 nnoremap <C-L> :nohl<CR><C-L>
-set background=light
-colorscheme solarized8
-
