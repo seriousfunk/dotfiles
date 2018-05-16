@@ -16,17 +16,15 @@ fi
 #-------------------
 # Personnal Aliases
 #-------------------
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-# -> Prevents accidentally clobbering files.
-alias mkdir='mkdir -p'
-
+alias mkdir='mkdir -p' # Prevents accidentally clobbering files.
 alias h='history'
 alias j='jobs -l'
 alias which='type -a'
 alias ..='cd ..'
+alias c='clear'
 
 # Pretty-print of some PATH variables:
 alias path='echo -e ${PATH//:/\\n}'
@@ -66,7 +64,6 @@ if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   alias docker='docker.exe'
   alias docker-compose='docker-compose.exe'
 fi
-
 alias di='docker images'
 alias cdi='clear; docker images'
 alias dp='docker ps -a'
@@ -77,7 +74,6 @@ alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <n
 #-------------------------------------------------------------
 # Tailoring 'less'
 #-------------------------------------------------------------
-
 alias more='less'
 export PAGER=less
 export LESSCHARSET='latin1'
@@ -98,16 +94,13 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 #-------------------------------------------------------------
 # Set Editor
 #-------------------------------------------------------------
-
 export EDITOR="vim"
 export VISUAL="vim"
-
 set -o vi
 
 #-------------------------------------------------------------
 # Set Options
 #-------------------------------------------------------------
-
 shopt -s histappend histreedit histverify
 HISTCONTROL=ignoreboth:ignoredups:erasedups
 shopt -s cmdhist
@@ -117,7 +110,6 @@ set -o ignoreeof    # prevent exiting of shell with Ctrl-d
 #-------------------------------------------------------------
 # Set Prompt, Greeting, Exit messaging
 #-------------------------------------------------------------
-
 # Normal Colors
 Black='\e[0;30m'        # Black
 Red='\e[0;31m'          # Red
@@ -170,20 +162,14 @@ fi
 
 # Test user type:
 if [[ ${USER} == "root" ]]; then
-    SU=${Red}           # User is root.
-elif [[ ${USER} != "muro" ]]; then
-    SU=${BRed}          # User is not login user.
+    SU=${ALERT}           # User is root.
 else
-    SU=${BGreen}         # User is normal (well ... most of us are).
+    SU=${BCyan}         # User is normal (well ... most of us are).
 fi
-
-# Now we construct the prompt.
-# PROMPT_COMMAND="history -a"
 
 function exitstatus {
 
     EXITSTATUS="$?"
-
     HOST="\h"
     USERNAME="\u"
     DIR="\w"
@@ -191,19 +177,15 @@ function exitstatus {
     DATE="\d"
     TIME="\t"
 
-    # First USER:HOST sets the terminal window title
-    # PROMPT="${USERNAME}@${HOST}: \w\007\n\[$BBlue\][\[${SU}\]${USERNAME}\[$BBlue\]:\[$BGreen\]${HOST}\[$BBlue\]][\[$BGreen\]${DIR}\[$BBlue\]]\[$NC\]" 
-    # PROMPT="$BBlue${SU}${USERNAME}$BBlue@$BGreen${HOST}: ${DIR}$BBlue\[$NC\]" 
     PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
     if [ "${EXITSTATUS}" -eq 0 ] 
     then
-       PS1="${PROMPT} ${BGreen}:)${NC}${NEWLINE}\$ "
-       # PS1="${PROMPT} ${BGreen}:)${NC} \$ "
+       PROMPT="${BGreen}:)${NC} "
     else
-       PS1="${PROMPT} ${BRed}:(${NC}${NEWLINE}\$ "
-       # PS1="${PROMPT} ${BRed}:(${NC} \$ "
+       PROMPT="${BRed}:(${NC} "
     fi
 
+    PS1="${PROMT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC} ${DIR} \$"
     PS2="${Bold}>${NC} "
 }
 
