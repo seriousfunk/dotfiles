@@ -185,7 +185,7 @@ function exitstatus {
        PROMPT="${BRed}:(${NC} "
     fi
 
-    PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC} ${DIR} \$"
+    PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC} ${DIR}${NEWLINE}\$ "
     PS2="${Bold}>${NC} "
 }
 
@@ -193,3 +193,6 @@ PROMPT_COMMAND=exitstatus;history -a;
 
 #make sure terminal window and vi fill screen with color and not just behind text
 export TERM=screen-256color
+
+if [ -f figlet ] then figlet "HAL 9000"; fi
+if [ -f fortune ] then fortune; fi
