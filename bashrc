@@ -214,5 +214,3 @@ then
 else 
   echo -e "${NC}Install 'fortune' for a random fortune when you login."; 
 fi
-
-echo ${NEWLINE}
