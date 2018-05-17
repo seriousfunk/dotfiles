@@ -32,5 +32,7 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+echo -e "-------------------------------------------------"
 echo -e "\e[0;33m Update your ~/.gitconfig if you are not Matt Muro \e[m"
+echo -e "-------------------------------------------------"
 sleep 5
