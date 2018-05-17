@@ -47,7 +47,7 @@ git config --global user.email "you@email.com"
 git config --global color.ui true
 git config --global push.default simple
 # remember your password for 15 mins
-git config credential.helper 'cache --timeout=900'
+git config --global credential.helper 'cache --timeout=900'
 ```
 
 You May Need to
