@@ -3,7 +3,7 @@ Dotfiles
 
 Cloud storage for my Linux dotfiles so I can sync my bash, vim and other settings across servers.
 
-This script and much of the abridged markdown below was taken from:
+This script and Overview below was taken from:
 + https://github.com/michaeljsmalley/dotfiles
 + http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 
@@ -36,30 +36,4 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && ./makevimfancy.sh \
 && . ~/.bashrc 
 ```
-
-Configuration
-------------
-You can skip some of these steps (i.e. global config settings) if you already have a .gitconfig with your settings.
-
-``` bash
-git config --global user.name "Your Name"
-git config --global user.email "you@email.com"
-git config --global color.ui true
-git config --global push.default simple
-# remember your password for 15 mins
-git config --global credential.helper 'cache --timeout=900'
-```
-
-You May Need to
-------------
-
-``` bash
-cd ~/dotfiles/.git
-vi config
-# if your [remote "origin"] url is not you@github, fix it.
-# it may be incorrect if your server has an older version of git on it and you've cloned https
-change:  url = https://github.com/seriousfunk/dotfiles
-to this: url = https://seriousfunk@github.com/seriousfunk/dotfiles.git
-```
-
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
