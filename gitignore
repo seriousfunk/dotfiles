@@ -22,6 +22,7 @@
 *.jar
 *.rar
 *.tar
+*.tgz
 *.zip
 
 # Logs and databases #
@@ -41,10 +42,11 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-*.lock
-
 # Node.js
 ######################
-node_modules
-package-lock.json
+.eslintcache
+.node_repl_history
 .npm
+package-lock.json
+*.locknode_modules
+
