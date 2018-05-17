@@ -22,3 +22,11 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && . ~/.bashrc 
 ```
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
+
+Extras
+------------
+My ~/.bashrc prints a header and fortune when I login. If you'd like a little extra flair you can 
+install those using: 
+``` bash 
+sudo apt-get install fortune && sudo apt-get install figlet
+```
