@@ -12,3 +12,4 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 # add vim colorschemes 
 cd ~/.vim/bundle && \
 git submodule add https://github.com/rafi/awesome-vim-colorschemes
+git submodule add https://github.com/vim-airline/vim-airline
