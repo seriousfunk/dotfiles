@@ -31,3 +31,5 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+echo "\e[0;33mUpdate your ~/.gitconfig if you are not Matt Muro\e[m"
