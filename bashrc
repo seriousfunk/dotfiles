@@ -147,7 +147,9 @@ ALERT=${BWhite}${On_Red} # Bold White on red background
 
 function _exit()        # Function to run upon exit of shell.
 {
+    echo
     echo -e "${BRed}Dave, this conversation can serve no purpose anymore. Goodbye.${NC}"
+    echo
     sleep 3
 }
 trap _exit EXIT
