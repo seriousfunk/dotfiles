@@ -8,9 +8,9 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim"          # list of files/folders to symlink in homedir
+dir=~/dotfiles                                # dotfiles directory
+olddir=~/dotfiles_old                         # old dotfiles backup directory
+files="bashrc vimrc vim gitconfig gitignore"  # list of files/folders to symlink in homedir
 
 ##########
 
@@ -32,4 +32,5 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-echo "\e[0;33mUpdate your ~/.gitconfig if you are not Matt Muro\e[m"
+echo -e "\e[0;33m Update your ~/.gitconfig if you are not Matt Muro \e[m"
+sleep 5
