@@ -163,7 +163,7 @@ fi
 
 # Test user type:
 if [[ ${USER} == "root" ]]; then
-    SU=${ALERT}           # User is root.
+    SU=${ALERT}         # User is root.
 else
     SU=${BCyan}         # User is normal (well ... most of us are).
 fi
@@ -186,7 +186,7 @@ function exitstatus {
        PROMPT="${BRed}:(${NC} "
     fi
 
-    PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC} ${DIR}${NEWLINE}\$ "
+    PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC}${DIR}${NEWLINE}   \$ "
     PS2="${Bold}>${NC} "
 }
 
@@ -200,6 +200,7 @@ export TERM=screen-256color
 #-------------------------------------------------------------
 # print banner and fortune if installed on system
 #-------------------------------------------------------------
+clear;
 if hash figlet 2>/dev/null; 
 then 
   echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; 
@@ -211,8 +212,7 @@ if hash figlet 2>/dev/null;
 then 
   echo -e "${Yellow}"; fortune; echo -e "${NC}"; 
 else 
-  echo -e "${NC}Install fortune a random fortune when you login."; 
+  echo -e "${NC}Install 'fortune' for a random fortune when you login."; 
 fi
 
-if hash fortune 2>/dev/null; then echo -e "${Yellow}"; fortune; echo -e "${NC}"; fi
 echo ${NEWLINE}
