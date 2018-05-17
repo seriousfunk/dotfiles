@@ -205,7 +205,7 @@ if hash figlet 2>/dev/null;
 then 
   echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; 
 else 
-  echo -e "${NC}Install figlet to print a custom header from ~/.bashrc"; 
+  echo -e "${NC}Install 'figlet' to print a custom header from ~/.bashrc"; 
 fi
 
 if hash figlet 2>/dev/null; 
