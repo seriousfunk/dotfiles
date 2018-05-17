@@ -47,5 +47,5 @@
   o=checkout
   p=push 
   s=status
-  u=git pull 
+  u=pull 
 
