@@ -1,6 +1,9 @@
 execute pathogen#infect() 
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
+set nocompatible
 set t_Co=256              " enable 256-color mode.
+set showmatch             " automatically show matching brackets
+set vb                    " use visual bell instead of annoying errorbells
 syntax enable             " enable syntax highlighting (previously syntax on).
 set number                " show line numbers
 set laststatus=2          " last window always has a statusline
