@@ -33,7 +33,7 @@ for file in $files; do
 done
 
 echo -e "\e[0;33mPausing 5 seconds for message:\e[m"
-echo -e "---------------------------------------------------"
-echo -e "\e[0;33m Update your ~/.gitconfig if you are not Matt Muro \e[m"
-echo -e "---------------------------------------------------"
+echo -e "------------------------------------------------"
+echo -e "\e[0;33m Update your ~/.gitconfig with your credentials \e[m"
+echo -e "------------------------------------------------"
 sleep 5
