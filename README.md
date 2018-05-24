@@ -23,10 +23,21 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 ```
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
 
+UN-Installation
+------------
+To roll everything back
+``` bash
+cd ~/dotfiles \
+&& chmod u+x ./uninstall.sh \
+&& ./uninstall.sh
+```
+
 Extras
 ------------
 My ~/.bashrc prints a header and fortune when I login. If you'd like a little extra flair you can 
-install those using: 
+install those using the following or your distributions package manager: 
 ``` bash 
-sudo apt-get install fortune && sudo apt-get install figlet
+sudo apt update \
+&& sudo apt install fortune \
+&& sudo apt install figlet
 ```
