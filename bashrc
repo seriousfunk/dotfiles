@@ -63,11 +63,14 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   alias docker='docker.exe'
   alias docker-compose='docker-compose.exe'
+#  export DOCKER_HOST=tcp://localhost:2375
+  export PATH="$HOME/bin:$HOME/.local/bin:$PATH"                       
+  export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 fi
 alias di='docker images'
 alias cdi='clear; docker images'
-alias dp='docker ps -a'
-alias cdp='clear; docker ps -a'
+alias dc='docker ps -a'
+alias cdc='clear; docker ps -a'
 alias drmc='docker rm -f $(docker ps -a -q)' # Remove stopped containers
 alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <none> containers
 
@@ -150,7 +153,7 @@ function _exit()        # Function to run upon exit of shell.
     echo
     echo -e "${BRed}Dave, this conversation can serve no purpose anymore. Goodbye.${NC}"
     echo
-    sleep 3
+    sleep 1
 }
 trap _exit EXIT
 
@@ -216,3 +219,4 @@ then
 else 
   echo -e "${NC}Install 'fortune' for a random fortune when you login."; 
 fi
+
