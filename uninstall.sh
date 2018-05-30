@@ -12,11 +12,11 @@ olddir=~/dotfiles_old                         # old dotfiles backup directory
 files="bashrc vimrc vim gitconfig gitignore"  # list of files/folders to symlink in homedir                        
                                                                                                                    
 ##########                                                                                                         
-echo -e "\e[0;33m---------------------------------------------\e[m"
+echo
+echo -e "\e[0;33m-------------------------------------------------------\e[m"
 echo "This script will remove the custom dotfiles that you "
 echo "installed from https://github.com/seriousfunk/dotfiles."
-echo -e "\e[0;33m---------------------------------------------\e[m"
-echo
+echo -e "\e[0;33m-------------------------------------------------------\e[m"
 echo "Specifically ~/.bashrc ~/.gitconfig ~/.gitignore ~/.vim ~/.vimrc"
 
 # confirm user wants to delete custom dotfiles and restore their files webacked up
@@ -29,7 +29,7 @@ ans=${uninstallAnswer:-Y}
 if [ n == $ans ] || [ N == $ans ]
 then
   echo
-  echo -e "\e[0;33mNo changes made.\e[m"
+  echo -e "\e[0;31mNo changes made.\e[m"
   echo
   exit 0
 fi
