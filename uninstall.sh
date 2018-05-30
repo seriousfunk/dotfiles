@@ -13,7 +13,7 @@ files="bashrc vimrc vim gitconfig gitignore"  # list of files/folders to symlink
                                                                                                                    
 ##########                                                                                                         
 echo -e "\e[0;33m---------------------------------------------\e[m"
-echo "This script will the custom dotfiles that you "
+echo "This script will remove the custom dotfiles that you "
 echo "installed from https://github.com/seriousfunk/dotfiles."
 echo -e "\e[0;33m---------------------------------------------\e[m"
 echo
@@ -29,7 +29,7 @@ ans=${uninstallAnswer:-Y}
 if [ n == $ans ] || [ N == $ans ]
 then
   echo
-  echo -e "No changes made."
+  echo -e "\e[0;33mNo changes made.\e[m"
   echo
   exit 0
 fi
@@ -61,5 +61,5 @@ rm -rf $dir $olddir
 
 echo
 echo -e "\e[0;32Custom dotfiles removed. Everything set back to what it was before.\e[m"     
-echo "done.                                                                                                        
-
+echo "done."                                                                                                        
+exit 0
