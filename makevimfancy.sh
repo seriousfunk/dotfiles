@@ -16,3 +16,4 @@ git clone https://github.com/vim-airline/vim-airline
 
 # return user to home directory
 cd ~
+

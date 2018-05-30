@@ -61,7 +61,7 @@ cd ~
 rm -rf $dir $olddir      
 
 echo
-echo -e "\e[0;32Custom dotfiles removed. Everything set back to what it was before.\e[m"     
+echo -e "\e[0;32mCustom dotfiles removed. Everything set back to what it was before.\e[m"     
 echo "done."                                                                                                        
 echo
 exit 0
