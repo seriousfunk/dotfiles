@@ -15,5 +15,5 @@ git clone https://github.com/rafi/awesome-vim-colorschemes
 git clone https://github.com/vim-airline/vim-airline
 
 # return user to home directory
-cd ~
+cd ~/
 
