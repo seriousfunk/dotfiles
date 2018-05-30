@@ -22,8 +22,9 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && . ~/.bashrc 
 ```
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
+Be sure you update ~/.gitconfig with your information
 
-UN-Installation
+Uninstall
 ------------
 To roll everything back
 ``` bash
