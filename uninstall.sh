@@ -48,7 +48,7 @@ then
   cd $olddir  
   # copying any backed up dotfiles to users home directory
   for file in $files; do                                                                                             
-    mv $olddir/$file $HOME/$file
+    mv $file $HOME
   done
   echo "Restored your backed up dotfiles to your home directory."
 else
