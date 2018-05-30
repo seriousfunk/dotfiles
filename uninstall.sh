@@ -57,6 +57,7 @@ fi
 
 echo
 echo -n "Removing $dir and $olddir"
+cd ~
 rm -rf $dir $olddir      
 
 echo
