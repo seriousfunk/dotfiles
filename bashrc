@@ -33,8 +33,6 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
 
-alias gdn='cd /mnt/c/Users/muro/Documents/bitbucket-repos/dce-nodejs'
-
 #-------------------------------------------------------------
 # The 'ls' family (this assumes you use a recent GNU ls).
 #-------------------------------------------------------------
@@ -42,8 +40,8 @@ alias gdn='cd /mnt/c/Users/muro/Documents/bitbucket-repos/dce-nodejs'
 alias ls='ls -h --color'
 alias lx='ls -lXB'         #  Sort by extension.
 alias lk='ls -lSr'         #  Sort by size, biggest last.
-alias lt='ls -lt'         #  Sort by date, most recent first.
-alias ltr='ls -ltr'         #  Sort by date, most recent last.
+alias lt='ls -lt'          #  Sort by date, most recent first.
+alias ltr='ls -ltr'        #  Sort by date, most recent last.
 alias lc='ls -ltcr'        #  Sort by/show change time,most recent last.
 alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
 
