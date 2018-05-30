@@ -13,3 +13,6 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle && \
 git clone https://github.com/rafi/awesome-vim-colorschemes
 git clone https://github.com/vim-airline/vim-airline
+
+# return user to home directory
+cd ~
