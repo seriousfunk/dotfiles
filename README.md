@@ -30,7 +30,8 @@ To roll everything back
 ``` bash
 cd ~/dotfiles \
 && chmod u+x ./uninstall.sh \
-&& ./uninstall.sh
+&& ./uninstall.sh \
+&& . ~/.bashrc
 ```
 
 Extras
