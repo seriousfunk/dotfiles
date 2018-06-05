@@ -49,4 +49,4 @@ Thumbs.db
 .npm
 package-lock.json
 *.locknode_modules
-
+config.json
