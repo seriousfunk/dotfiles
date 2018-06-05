@@ -47,6 +47,7 @@ Thumbs.db
 .eslintcache
 .node_repl_history
 .npm
+node_modules
 package-lock.json
 *.locknode_modules
 config.json
