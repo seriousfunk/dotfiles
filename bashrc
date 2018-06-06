@@ -66,9 +66,9 @@ if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
   export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
 fi
 alias di='docker images'
-alias cdi='clear; docker images; clear'
+alias cdi='clear; docker images; echo'
 alias dc='docker ps -a'
-alias cdc='clear; docker ps -a; clear'
+alias cdc='clear; docker ps -a; echo'
 alias drmc='docker rm -f $(docker ps -a -q)' # Remove stopped containers
 alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <none> containers
 
