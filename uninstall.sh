@@ -8,8 +8,10 @@
 ########## Variables                                                                                               
                                                                                                                    
 dir=~/dotfiles                                # dotfiles directory                                                 
-olddir=~/dotfiles_old                         # old dotfiles backup directory                                      
-files="bashrc vimrc vim gitconfig gitignore"  # list of files/folders to symlink in homedir                        
+olddir=~/dotfiles_old                         # old dotfiles backup directory   
+
+# list of files/folders to symlink in homedir                        
+files="bashrc vimrc vim gitconfig gitignore dockerignore"  
                                                                                                                    
 ##########                                                                                                         
 echo
