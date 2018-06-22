@@ -51,3 +51,7 @@ node_modules
 package-lock.json
 *.locknode_modules
 config.json
+
+# SSL
+######################
+acme.json
