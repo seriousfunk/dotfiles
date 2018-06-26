@@ -67,7 +67,7 @@ if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
 fi
 alias di='docker images'
 alias cdi='clear; docker images; echo'
-alias dc='docker ps -a'
+alias dc='docker-compose'
 alias cdc='clear; docker ps -a; echo'
 alias drmc='docker rm -f $(docker ps -a -q)' # Remove stopped containers
 alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <none> containers
