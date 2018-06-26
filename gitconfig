@@ -43,6 +43,7 @@
   c=commit
   d=diff 
   g=log --oneline
+  go=checkout -b 
   l=log --oneline --graph --decorate
   o=checkout
   p=push 
