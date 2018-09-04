@@ -55,3 +55,8 @@ config.json
 # SSL
 ######################
 acme.json
+
+ # Environment variables
+ ###################### 
+ *.env                  
+ 
