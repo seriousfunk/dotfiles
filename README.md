@@ -19,6 +19,7 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && chmod u+x ./makesymlinks.sh ./makevimfancy.sh \
 && ./makesymlinks.sh \
 && ./makevimfancy.sh \
+&& ./makefortunes.sh \
 && . ~/.bashrc 
 ```
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
