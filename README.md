@@ -10,6 +10,17 @@ Overview
 1. Backs up any existing dotfiles in your home directory to `~/dotfiles_old/`
 2. Create symlinks in your home directory to the dotfiles in `~/dotfiles/`
 
+Pre-Install
+------------
+My ~/.bashrc prints a header and fortune when I login. If you'd like a little extra flair you can 
+install those using the following or your distributions package manager. Do this before running 
+the Installation scripts or simply run makefortunes.sh later.
+``` bash 
+sudo apt update \
+&& sudo apt install fortune \
+&& sudo apt install figlet
+```
+
 Installation
 ------------
 Cut and paste into your linux terminal the 6 lines below to install and link these dotfiles :)
@@ -37,10 +48,3 @@ cd ~/dotfiles \
 
 Extras
 ------------
-My ~/.bashrc prints a header and fortune when I login. If you'd like a little extra flair you can 
-install those using the following or your distributions package manager: 
-``` bash 
-sudo apt update \
-&& sudo apt install fortune \
-&& sudo apt install figlet
-```
