@@ -17,8 +17,8 @@ install those using the following or your distributions package manager. Do this
 the Installation scripts or simply run makefortunes.sh later.
 ``` bash 
 sudo apt update \
-&& sudo apt install fortune \
-&& sudo apt install figlet
+&& sudo apt -y install fortune \
+&& sudo apt -y install figlet
 ```
 
 Installation
