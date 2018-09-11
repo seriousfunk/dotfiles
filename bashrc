@@ -211,7 +211,7 @@ else
   echo -e "${NC}Install 'figlet' to print a custom header from ~/.bashrc"; 
 fi
 
-if hash figlet 2>/dev/null; 
+if hash fortune 2>/dev/null; 
 then 
   echo -e "${Yellow}"; fortune; echo -e "${NC}"; 
 else 
