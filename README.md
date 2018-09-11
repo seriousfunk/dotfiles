@@ -45,6 +45,3 @@ cd ~/dotfiles \
 && ./uninstall.sh \
 && . ~/.bashrc
 ```
-
-Extras
-------------
