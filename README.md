@@ -16,7 +16,7 @@ Cut and paste into your linux terminal the 6 lines below to install and link the
 ``` bash
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && cd ~/dotfiles \
-&& chmod u+x ./makesymlinks.sh ./makevimfancy.sh \
+&& chmod u+x ./makesymlinks.sh ./makevimfancy.sh \ ./makefortunes.sh
 && ./makesymlinks.sh \
 && ./makevimfancy.sh \
 && ./makefortunes.sh \
