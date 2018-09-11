@@ -1,4 +1,9 @@
-#!/bin/bash                                                                                        
+#!/bin/bash                                                                                                        
+############################                                                                                       
+# makefortunes.sh                                                                                                  
+# Creates symlinks to /usr/share/games/fortunes for our custome fortune files
+# Script origin: https://github.com/seriousfunk/dotfiles                                                                                                                     
+############################                                                                            
                                                                                                    
 myFortunesDir=~/dotfiles/fortunes                                                                  
 fortunesDir=/usr/share/games/fortunes                                                              
