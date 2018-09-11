@@ -1,6 +1,6 @@
 #!/bin/bash
 ############################
-# makesfancy.sh
+# makevimfancy.sh
 # This script add vim-pathogen pkg mgr and vim colorschemes
 # Script origin: https://github.com/seriousfunk/dotfiles/
 ############################
