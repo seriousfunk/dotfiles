@@ -18,7 +18,7 @@ the Installation scripts or simply run makefortunes.sh later.
 ``` bash 
 sudo apt update \
 && sudo apt -y install figlet \
-&& sudo apt -y install fortune
+&& sudo apt -y install fortune-mod
 ```
 
 Installation
