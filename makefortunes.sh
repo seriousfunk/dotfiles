@@ -16,11 +16,17 @@ then
   echo "";                                                                                       
 else                                                                                             
     echo "";                                                                                     
-    echo -e "\e[0;31mYou must install fortune first.\e[m";                                       
+    echo -e "\e[0;31mYou must install fortune first. (e.g. sudo apt install fortune-mod)\e[m"; 
     echo "";                                                                                     
     exit 1;                                                                                      
 fi                                                                                               
-                                                                                                 
+
+# create system fortune directory if it does not already exist
+if [ ! -d $fortunesDir ]
+then
+  sudo mkdir $fortunesDir  
+fi
+
 for filename in $myFortunesDir/*; do                                                             
   if [ -e $fortunesDir/${filename##*/} ]                                                         
   then                                                                                           
