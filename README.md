@@ -17,8 +17,8 @@ install those using the following or your distributions package manager. Do this
 the Installation scripts or simply run makefortunes.sh later.
 ``` bash 
 sudo apt update \
+&& sudo apt -y install figlet \
 && sudo apt -y install fortune \
-&& sudo apt -y install figlet
 ```
 
 Installation
@@ -30,9 +30,10 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && chmod u+x ./makesymlinks.sh ./makevimfancy.sh ./makefortunes.sh \
 && ./makesymlinks.sh \
 && ./makevimfancy.sh \
-&& ./makefortunes.sh \
+&& sudo ./makefortunes.sh \
 && . ~/.bashrc 
 ```
+
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
 Be sure you update ~/.gitconfig with your information
 
