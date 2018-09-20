@@ -13,12 +13,12 @@ Overview
 Pre-Install
 ------------
 My ~/.bashrc prints a header and fortune when I login. If you'd like a little extra flair you can 
-install those using the following or your distributions package manager. Do this before running 
+install those using the following or your distribution's package manager. Do this before running 
 the Installation scripts or simply run makefortunes.sh later.
 ``` bash 
 sudo apt update \
 && sudo apt -y install figlet \
-&& sudo apt -y install fortune \
+&& sudo apt -y install fortune
 ```
 
 Installation
