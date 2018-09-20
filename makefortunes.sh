@@ -5,8 +5,8 @@
 # Script origin: https://github.com/seriousfunk/dotfiles                                                                                                                     
 ############################            
 
-$myFortunesDir=~/dotfiles/fortunes
-$fortunesDir=/usr/share/games/fortunes
+myFortunesDir=~/dotfiles/fortunes
+fortunesDir=/usr/share/games/fortunes
                                                                                                    
 # make sure fortune is installed                                                                 
 if [ -x /usr/games/fortune ]                                                                     
