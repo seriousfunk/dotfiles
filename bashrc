@@ -184,9 +184,9 @@ function exitstatus {
     PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
     if [ "${EXITSTATUS}" -eq 0 ] 
     then
-       PROMPT="${BGreen}:)${NC} "
+       PROMPT="${BGreen}👽${NC} "
     else
-       PROMPT="${BRed}:(${NC} "
+       PROMPT="${BRed}👿${NC} "
     fi
 
     PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC}${DIR}${NEWLINE}   \$ "
