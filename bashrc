@@ -189,7 +189,7 @@ function exitstatus {
        PROMPT="${BRed} ❌${NC} "
     fi
 
-    PS1="${PROMPT}${SU}${USERNAME}@${HOST} ${NC}${Yellow}${DIR}${NC}${NEWLINE}   \$ "
+    PS1="${PROMPT}${SU}${USERNAME}@${HOST} ${NC}${Yellow}${DIR}${NC}${NEWLINE}    \$ "
     PS2="${Bold}>${NC} "
 }
 
