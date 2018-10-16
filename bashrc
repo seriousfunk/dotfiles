@@ -168,7 +168,7 @@ fi
 if [[ ${USER} == "root" ]]; then
     SU=${ALERT}         # User is root.
 else
-    SU=${BCyan}         # User is normal (well ... most of us are).
+    SU=${Blue}         # User is normal (well ... most of us are).
 fi
 
 function exitstatus {
@@ -184,12 +184,12 @@ function exitstatus {
     PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
     if [ "${EXITSTATUS}" -eq 0 ] 
     then
-       PROMPT="${BGreen}👽${NC} "
+       PROMPT="${BGreen} 👽${NC} "
     else
-       PROMPT="${BRed}👿${NC} "
+       PROMPT="${BRed} 😠${NC} "
     fi
 
-    PS1="${PROMPT}${SU}${USERNAME} @ ${HOST}${BBlue} : ${NC}${DIR}${NEWLINE}   \$ "
+    PS1="${PROMPT}${SU}${USERNAME}@${HOST} ${NC}${Yellow}${DIR}${NC}${NEWLINE}   \$ "
     PS2="${Bold}>${NC} "
 }
 
