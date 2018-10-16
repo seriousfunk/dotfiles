@@ -186,7 +186,7 @@ function exitstatus {
     then
        PROMPT="${BGreen} 👽${NC} "
     else
-       PROMPT="${BRed} 😠${NC} "
+       PROMPT="${BRed} 👾${NC} "
     fi
 
     PS1="${PROMPT}${SU}${USERNAME}@${HOST} ${NC}${Yellow}${DIR}${NC}${NEWLINE}   \$ "
