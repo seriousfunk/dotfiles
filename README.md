@@ -13,8 +13,9 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && . ~/.bashrc 
 ```
 
-You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
 Be sure you update ~/.gitconfig with your information
+
+You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
 
 #### Manual Installation
 ``` bash 
