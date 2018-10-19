@@ -5,7 +5,8 @@ Cloud storage for my Linux dotfiles so I can sync my bash, vim and other setting
 1. Backs up any existing dotfiles in your home directory to `~/dotfiles_old/`
 2. Create symlinks in your home directory to the dotfiles in `~/dotfiles/`
 
-#### Installation
+#### Install
+Copy the four lines below into your terminal, hit enter and smile.
 ``` bash 
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && chmod u+x ~/dotfiles/install.sh \
@@ -16,19 +17,6 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 Be sure you update ~/.gitconfig with your information
 
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
-
-#### Manual Installation
-``` bash 
-sudo apt update \
-&& sudo apt -y install figlet fortune-mod curl
-git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
-&& cd ~/dotfiles \
-&& chmod u+x ./makesymlinks.sh ./makevimfancy.sh ./makefortunes.sh \
-&& ./makesymlinks.sh \
-&& ./makevimfancy.sh \
-&& sudo ./makefortunes.sh \
-&& . ~/.bashrc 
-```
 
 #### Uninstall
 To roll everything back
