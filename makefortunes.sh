@@ -1,4 +1,4 @@
-#!/bin/bash                                                                                                        
+#!/bin/bash                                                                                                         
 ############################                                                                                       
 # makefortunes.sh                                                                                                  
 # Creates symlinks to /usr/share/games/fortunes for our custome fortune files
@@ -24,7 +24,12 @@ fi
 # create system fortune directory if it does not already exist
 if [ ! -d $fortunesDir ]
 then
+# if not logged in as root use sudo 
+if [[ $EUID -ne 0 ]]; then          
   sudo mkdir $fortunesDir  
+elfi                                
+  mkdir $fortunesDir  
+fi
 fi
 
 for filename in $myFortunesDir/*; do                                                             
@@ -36,5 +41,12 @@ for filename in $myFortunesDir/*; do
     echo -e "\e[0;33m-> created symlink for $filename\e[m"                                       
   fi                                                                                             
 done                                                                                             
-                                                                                                 
+
+# create symlink for fortune if it is not in the path
+if ! hash fortune 2>/dev/null; 
+then 
+  [[ ":$PATH:" != *":/usr/local/bin:"* ]] && PATH="/usr/local/bin:${PATH}" 
+  ln -s /usr/games/fortune /usr/local/bin/fortune
+fi
+
 echo ""                                                                                                                                                                                   

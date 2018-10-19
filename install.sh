@@ -36,11 +36,18 @@ then
   exit 0
 fi
 
+# if not logged in as root use sudo 
+if [[ $EUID -ne 0 ]]; then          
+  sudo apt -y install figlet fortune-mod curl
+elif                                
+  apt -y install figlet fortune-mod curl
+fi                                  
+
 cd $dir
 chmod u+x ./makesymlinks.sh ./makevimfancy.sh ./makefortunes.sh 
 ./makesymlinks.sh 
 ./makevimfancy.sh \
-# sudo this command if not running as root
+# if not logged in as root use sudo
 if [[ $EUID -ne 0 ]]; then
   sudo ./makefortunes.sh 
 elif 
