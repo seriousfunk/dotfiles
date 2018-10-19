@@ -3,8 +3,6 @@ Dotfiles
 
 Cloud storage for my Linux dotfiles so I can sync my bash, vim and other settings across servers.
 
-This script was based on https://github.com/michaeljsmalley/dotfiles
-
 Overview
 ------------
 1. Backs up any existing dotfiles in your home directory to `~/dotfiles_old/`
