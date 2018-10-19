@@ -6,10 +6,12 @@ Cloud storage for my Linux dotfiles so I can sync my bash, vim and other setting
 2. Create symlinks in your home directory to the dotfiles in `~/dotfiles/`
 
 #### Installation
+``` bash 
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && chmod u+x ~/dotfiles/install.sh \
 && ~dotfiles/install.sh \
 && . ~/.bashrc 
+```
 
 You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
 Be sure you update ~/.gitconfig with your information
