@@ -1,28 +1,23 @@
-Dotfiles
-========
-
+# Dotfiles
 Cloud storage for my Linux dotfiles so I can sync my bash, vim and other settings across servers.
 
-Overview
-------------
+## Overview
 1. Backs up any existing dotfiles in your home directory to `~/dotfiles_old/`
 2. Create symlinks in your home directory to the dotfiles in `~/dotfiles/`
 
-Pre-Install
-------------
-My ~/.bashrc prints a header and fortune when I login. If you'd like a little extra flair you can 
-install those using the following or your distribution's package manager. Do this before running 
-the Installation scripts or simply run makefortunes.sh later.
+#### Installation
+git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
+&& chmod u+x ~/dotfiles/install.sh \
+&& ~dotfiles/install.sh \
+&& . ~/.bashrc 
+
+You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
+Be sure you update ~/.gitconfig with your information
+
+#### Manual Installation
 ``` bash 
 sudo apt update \
-&& sudo apt -y install figlet \
-&& sudo apt -y install fortune-mod
-```
-
-Installation
-------------
-Cut and paste into your linux terminal the 7 lines below to install and link these dotfiles :)
-``` bash
+&& sudo apt -y install figlet fortune-mod curl
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && cd ~/dotfiles \
 && chmod u+x ./makesymlinks.sh ./makevimfancy.sh ./makefortunes.sh \
@@ -32,11 +27,7 @@ git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && . ~/.bashrc 
 ```
 
-You may need to exit and restart your shell/terminal if sourcing your ~/.bashrc is not sufficient.
-Be sure you update ~/.gitconfig with your information
-
-Uninstall
-------------
+#### Uninstall
 To roll everything back
 ``` bash
 cd ~/dotfiles \
