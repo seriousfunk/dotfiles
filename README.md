@@ -9,7 +9,7 @@ Cloud storage for my Linux dotfiles so I can sync my bash, vim and other setting
 ``` bash 
 git clone https://github.com/seriousfunk/dotfiles ~/dotfiles \
 && chmod u+x ~/dotfiles/install.sh \
-&& ~dotfiles/install.sh \
+&& ~/dotfiles/install.sh \
 && . ~/.bashrc 
 ```
 
