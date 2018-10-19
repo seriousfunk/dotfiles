@@ -24,12 +24,12 @@ fi
 # create system fortune directory if it does not already exist
 if [ ! -d $fortunesDir ]
 then
-# if not logged in as root use sudo 
-if [[ $EUID -ne 0 ]]; then          
-  sudo mkdir $fortunesDir  
-elfi                                
-  mkdir $fortunesDir  
-fi
+  # if not logged in as root use sudo 
+  if [[ $EUID -ne 0 ]]; then          
+    sudo mkdir $fortunesDir  
+  else                               
+    mkdir $fortunesDir  
+  fi
 fi
 
 for filename in $myFortunesDir/*; do                                                             

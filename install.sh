@@ -15,10 +15,10 @@ files="bashrc vimrc vim gitconfig gitignore dockerignore"
                                                                                                                    
 ##########                                                                                                         
 echo
-echo -e "\e[0;33m-------------------------------------------------------\e[m"
-echo "This script will backup your dotfiles to $olddir and link"
-echo "custom dotfiles from https://github.com/seriousfunk/dotfiles."
-echo -e "\e[0;33m-------------------------------------------------------\e[m"
+echo -e "\e[0;33m-------------------------------------------------------------------------\e[m"
+echo "This script will backup your dotfiles to $olddir and"
+echo "link custom dotfiles from https://github.com/seriousfunk/dotfiles."
+echo -e "\e[0;33m-------------------------------------------------------------------------\e[m"
 echo "Specifically ~/.bashrc ~/.gitconfig ~/.gitignore ~/.vim ~/.vimrc"
 
 # confirm user wants to install custom dotfiles
@@ -37,9 +37,10 @@ then
 fi
 
 # if not logged in as root use sudo 
-if [[ $EUID -ne 0 ]]; then          
+if [[ $EUID -ne 0 ]]; 
+then          
   sudo apt -y install figlet fortune-mod curl
-elif                                
+else                                
   apt -y install figlet fortune-mod curl
 fi                                  
 
@@ -50,7 +51,7 @@ chmod u+x ./makesymlinks.sh ./makevimfancy.sh ./makefortunes.sh
 # if not logged in as root use sudo
 if [[ $EUID -ne 0 ]]; then
   sudo ./makefortunes.sh 
-elif 
+else 
   ./makefortunes.sh 
 fi
 

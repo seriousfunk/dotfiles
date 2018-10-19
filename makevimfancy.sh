@@ -11,7 +11,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 # if not logged in as root use sudo
 if [[ $EUID -ne 0 ]]; then
   sudo apt -y install curl
-elfi
+else
   apt -y install curl
 fi
 
