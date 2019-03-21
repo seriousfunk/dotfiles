@@ -184,9 +184,9 @@ function exitstatus {
     PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
     if [ "${EXITSTATUS}" -eq 0 ] 
     then
-       PROMPT="${BGreen} 👽${NC} "
+       PROMPT="${BGreen} 👽 ${NC}"
     else
-       PROMPT="${BRed} ❌${NC} "
+       PROMPT="${BRed} ❌ ${NC}"
     fi
 
     PS1="${PROMPT}${SU}${USERNAME}@${HOST} ${NC}${Yellow}${DIR}${NC}${NEWLINE}    \$ "
@@ -206,7 +206,7 @@ export TERM=screen-256color
 clear;
 if hash figlet 2>/dev/null; 
 then 
-  echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; 
+  echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${BCyan}"; figlet -f lean $(hostname); echo -e "${NC}"; 
 else 
   echo -e "${NC}Install 'figlet' to print a custom header from ~/.bashrc"; 
 fi
