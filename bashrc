@@ -68,7 +68,8 @@ fi
 alias di='docker images'
 alias cdi='clear; docker images; echo'
 alias dc='docker-compose'
-alias cdc='clear; docker ps -a; echo'
+alias cdc='clear; docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias cdd='clear; docker ps -a; echo'
 alias drmc='docker rm -f $(docker ps -a -q)' # Remove stopped containers
 alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <none> containers
 
@@ -186,7 +187,7 @@ function exitstatus {
     then
        PROMPT="${BGreen} ✔️ ${NC} "
     else
-       PROMPT="${BRed} ❌${NC} "
+       PROMPT="${BRed} ❌ ${NC}"
     fi
 
     PS1="${PROMPT}${SU}${USERNAME}@${HOST} ${NC}${Yellow}${DIR}${NC}${NEWLINE}    \$ "
