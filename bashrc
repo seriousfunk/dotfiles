@@ -184,7 +184,7 @@ function exitstatus {
     PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
     if [ "${EXITSTATUS}" -eq 0 ] 
     then
-       PROMPT="${BGreen} 👽${NC} "
+       PROMPT="${BGreen} ✔️ ${NC} "
     else
        PROMPT="${BRed} ❌${NC} "
     fi
@@ -206,14 +206,20 @@ export TERM=screen-256color
 clear;
 if hash figlet 2>/dev/null; 
 then 
-  echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${NC}"; 
+  echo -e "${BRed}"; figlet "Watchcity"; echo -e "${NC}"; 
 else 
   echo -e "${NC}Install 'figlet' to print a custom header from ~/.bashrc"; 
 fi
 
 if hash fortune 2>/dev/null; 
 then 
-  echo -e "${Yellow}"; fortune; echo -e "${NC}"; 
+  # if not logged in as root use sudo  
+  if [[ $EUID -ne 0 ]]; then           
+    # echo -e "${Yellow}"; sudo fortune; echo -e "${NC}"; 
+    echo -e "${Yellow}"; fortune; echo -e "${NC}"; 
+  else                                 
+    echo -e "${Yellow}"; fortune; echo -e "${NC}"; 
+  fi                                   
 else 
   echo -e "${NC}Install 'fortune' for a random fortune when you login."; 
 fi
