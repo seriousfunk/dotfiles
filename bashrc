@@ -172,6 +172,20 @@ else
     SU=${Blue}         # User is normal (well ... most of us are).
 fi
 
+
+# declares an array with the emojis we want to support
+# get emojis at https://getemoji.com/
+EMOJIS=(🦞 🦥 🦎 🦖 🦕 🦑 🐙 🐋 🦊 🐔)
+
+# selects a random element from the EMOJIS set FOR THIS SESSION
+SESSION_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
+
+# function that selects and return a random element from the EMOJIS set
+RANDOM_EMOJI() {
+SELECTED_EMOJI=${EMOJIS[$RANDOM % ${#EMOJIS[@]}]};
+  echo $SELECTED_EMOJI;
+}
+
 function exitstatus {
 
     EXITSTATUS="$?"
@@ -185,8 +199,14 @@ function exitstatus {
     PROMPT="${NEWLINE}${SU}${USERNAME}@${HOST}$BBlue:${NC} ${DIR}$BBlue${NC}" 
     if [ "${EXITSTATUS}" -eq 0 ] 
     then
-       PROMPT="${BGreen} 👽 ${NC}"
+      # Pick and display a new RANDOM emoji every time the prompt is redrawn
+      # PROMPT="${BGreen} $(RANDOM_EMOJI) ${NC}"
+
+      # Show the SAME emoji at every prompt redraw for your session until you logout/login or resource your shell
+      PROMPT="${BGreen} ${SESSION_EMOJI} ${NC}"
     else
+       # Icon to show when command error
+       # PROMPT="${BRed} 💩 ${NC}"
        PROMPT="${BRed} ❌ ${NC}"
     fi
 
