@@ -152,7 +152,7 @@ function _exit()        # Function to run upon exit of shell.
     echo
     echo -e "${BRed}Dave, this conversation can serve no purpose anymore. Goodbye.${NC}"
     echo
-    sleep 1
+    sleep 2
 }
 trap _exit EXIT
 
@@ -227,7 +227,8 @@ export TERM=screen-256color
 clear;
 if hash figlet 2>/dev/null; 
 then 
-  echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${BCyan}"; figlet -f lean $(hostname); echo -e "${NC}"; 
+  # echo -e "${BRed}"; figlet "HAL 9000"; echo -e "${BCyan}"; figlet -f lean $(hostname); echo -e "${NC}"; 
+  echo -e "${BRed}"; figlet $(hostname); echo -e "${NC}"; 
 else 
   echo -e "${NC}Install 'figlet' to print a custom header from ~/.bashrc"; 
 fi
