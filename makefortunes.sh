@@ -37,7 +37,7 @@ for filename in $myFortunesDir/*; do
   then                                                                                           
     echo -e "\e[0;31m-> $fortunesDir/${filename##*/} already exists. Not creating symlink.\e[m"  
   else                                                                                           
-    ln -s $filename $fortunesDir/${filename##*/}                                                 
+    sudo ln -s $filename $fortunesDir/${filename##*/}                                                 
     echo -e "\e[0;33m-> created symlink for $filename\e[m"                                       
   fi                                                                                             
 done                                                                                             
