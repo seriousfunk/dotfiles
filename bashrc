@@ -72,6 +72,11 @@ alias cdc='clear; docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{
 alias cdd='clear; docker ps -a; echo'
 alias drmc='docker rm -f $(docker ps -a -q)' # Remove stopped containers
 alias drmi='docker rmi $(docker images -q --filter "dangling=true")' # Remove <none> containers
+#----
+alias graphlogs='docker logs -f dce-graphql'
+alias hilrlogs='docker logs -f dce-myhilr-app'
+alias shgraphql='docker exec -it dce-graphql /bin/bash'
+alias shilr='docker exec -it dce-myhilr-app /bin/bash'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
@@ -246,3 +251,7 @@ else
   echo -e "${NC}Install 'fortune' for a random fortune when you login."; 
 fi
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
