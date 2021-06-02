@@ -58,13 +58,6 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 #-------------------------------------------------------------
 # Docker shortcuts
 #-------------------------------------------------------------
-if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null ; then
-  alias docker='docker.exe'
-  alias docker-compose='docker-compose.exe'
-#  export DOCKER_HOST=tcp://localhost:2375
-  export PATH="$HOME/bin:$HOME/.local/bin:$PATH"                       
-  export PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"
-fi
 alias di='docker images'
 alias cdi='clear; docker images; echo'
 alias dc='docker-compose'
@@ -77,6 +70,8 @@ alias graphlogs='docker logs -f dce-graphql'
 alias hilrlogs='docker logs -f dce-myhilr-app'
 alias shgraphql='docker exec -it dce-graphql /bin/bash'
 alias shilr='docker exec -it dce-myhilr-app /bin/bash'
+alias docker-swap2blank='[ -f Dockerfile ] && mv Dockerfile Dockerfile-npm && mv Dockerfile-blank Dockerfile'
+alias docker-swap2npm='[ -f Dockerfile ] && mv Dockerfile Dockerfile-blank && mv Dockerfile-npm Dockerfile'
 
 #-------------------------------------------------------------
 # Tailoring 'less'
