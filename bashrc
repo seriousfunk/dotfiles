@@ -27,8 +27,8 @@ alias ..='cd ..'
 alias c='clear'
 
 # Git
-alias gits2h='[ -f ~/.ssh/config ] && [ -f ~/.ssh/config-home ] && command cp ~/.ssh/config-home config'
-alias gits2w='[ -f ~/.ssh/config ] && [ -f ~/.ssh/config-work ] && command cp ~/.ssh/config-work config'
+alias gits2h='[ -f ~/.ssh/config ] && [ -f ~/.ssh/config-home ] && command cp ~/.ssh/config-home ~/.ssh/config'
+alias gits2w='[ -f ~/.ssh/config ] && [ -f ~/.ssh/config-work ] && command cp ~/.ssh/config-work ~/.ssh/config'
 alias gitcc='[ -f ~/.ssh/config ] && cat ~/.ssh/config'
 
 # Pretty-print of some PATH variables:
