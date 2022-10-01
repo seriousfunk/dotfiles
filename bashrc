@@ -26,6 +26,11 @@ alias which='type -a'
 alias ..='cd ..'
 alias c='clear'
 
+# Git
+alias gits2h='[ -f ~/.ssh/config ] && [ -f ~/.ssh/config-home ] && command cp ~/.ssh/config-home config'
+alias gits2w='[ -f ~/.ssh/config ] && [ -f ~/.ssh/config-work ] && command cp ~/.ssh/config-work config'
+alias gitcc='[ -f ~/.ssh/config ] && cat ~/.ssh/config'
+
 # Pretty-print of some PATH variables:
 alias path='echo -e ${PATH//:/\\n}'
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
