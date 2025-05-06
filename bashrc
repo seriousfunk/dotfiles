@@ -38,8 +38,22 @@ alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 alias du='du -kh'    # Makes a more readable output.
 alias df='df -kTh'
 
-#-------------------------------------------------------------
-# The 'ls' family (this assumes you use a recent GNU ls).
+#-------------------
+# Personnal Functions
+#-------------------
+scrubh () {
+  if [ -z "$1" ]; then
+    echo -e "\nError: Parameter is not set. Usage: scrubh <searchstring>.\n"
+  else
+    echo -e "\nScrubbing history for '$1'.\n"
+    echo -e "Error expected. You may ignore 'history -d' error."
+    while history -d $(history | grep $1| head -n 1 | awk {'print $1'}) ; do :; history -w; done
+    echo -e "\nConfirming scrub by searching for '$1' via 'history | grep '$1'.\n"
+    echo -e "History successfully scrubbed if no results shown below."
+    history | grep '$1'
+  fi 
+}
+
 #-------------------------------------------------------------
 # Add colors for filetype and  human-readable sizes by default on 'ls':
 alias ls='ls -h --color'
@@ -77,6 +91,13 @@ alias shgraphql='docker exec -it dce-graphql /bin/bash'
 alias shilr='docker exec -it dce-myhilr-app /bin/bash'
 alias docker-swap2blank='[ -f Dockerfile ] && mv Dockerfile Dockerfile-npm && mv Dockerfile-blank Dockerfile'
 alias docker-swap2npm='[ -f Dockerfile ] && mv Dockerfile Dockerfile-blank && mv Dockerfile-npm Dockerfile'
+
+
+#-------------------------------------------------------------
+# Java 
+#-------------------------------------------------------------
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 #-------------------------------------------------------------
 # Tailoring 'less'
